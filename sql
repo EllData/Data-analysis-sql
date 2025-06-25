@@ -19,8 +19,12 @@ WHERE e.department_id = 90
 UNION
 
 SELECT j.employee_id, j.job_id, j.department_id
+  
 FROM hr.job_history j
 WHERE j.department_id = 90;
 SELECT FIRST_NAME, SALARY from hr.EMPLOYEES 
 where SALARY > (select avg(salary) from hr.employees);
 SELECT phone_number, instr(phone_number, '.',1,2) from hr.EMPLOYEES
+SELECT phone_number, instr(phone_number, '.',1,1)-1 yer from hr.EMPLOYEES
+SELECT phone_number, substr(phone_number,1 instr(phone_number, '.',1,1)-1) yer from hr.EMPLOYEES
+
